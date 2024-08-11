@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Telegram Mini App Tools</title>
+    <style>
+      body {
+        background: linear-gradient(
+          90deg,
+          rgba(204, 204, 204, 1) 30%,
+          rgba(240, 240, 240, 1) 70%
+        );
+        min-width: 300px;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin: 0 0 20px;
+        text-align: center;
+        color: #333;
+      }
+
+      #data {
+        margin: 20px 0 10px;
+        padding: 15px;
+        border: 2px solid #bbb;
+        border-radius: 5px;
+        background-color: #eee;
+        width: 100%;
+        max-width: 400px;
+        height: 100px;
+        overflow: auto;
+        color: #555;
+        font-size: 14px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      button {
+        padding: 10px 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%;
+        max-width: 400px;
+        font-size: 14px;
+        margin: 10px 0;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 10px;
+      }
+
+      .github-button {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background-color: #24292e;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .github-button:hover {
+        background-color: #1a1e21;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Telegram Mini App Tools</h1>
+    <div class="button-container">
+      <button id="originalUrlButton">Original URL</button>
+      <button id="toggleMiniAppButton">MiniApp in Web: [loading...]</button>
+      <button id="getAuthButton">Get Auth</button>
+    </div>
+    <p id="data">Results will be displayed here.</p>
+    <button id="copyButton">Copy</button>
+    <a
+      href="https://github.com/maanimis/TelegramMiniAppTools"
+      target="_blank"
+      class="github-button"
+      >GitHub</a
+    >
+    <script src="script/popup.js"></script>
+  </body>
+</html>

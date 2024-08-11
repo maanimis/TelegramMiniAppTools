@@ -1,22 +1,27 @@
 {
   "manifest_version": 3,
-  "name": "Telegram Mini App Auth Extractor",
+  "name": "Telegram Mini App Tools",
   "version": "1.0",
-  "description": "Extracts authorization string for Telegram Mini Apps from web version.",
+  "description": "Tools for Telegram Mini Apps from the web version.",
   "permissions": [
     "tabs",
-    "webNavigation"
+    "storage"
   ],
   "host_permissions": [
     "*://*.web.telegram.org/*"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "script/background.js"
   },
   "content_scripts": [
     {
-      "matches": ["*://web.telegram.org/*"],
-      "js": ["content.js"]
+      "matches": [
+        "*://web.telegram.org/*"
+      ],
+      "js": [
+        "script/content.js"
+      ],
+      "all_frames": true
     }
   ],
   "action": {

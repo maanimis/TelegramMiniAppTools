@@ -1,20 +1,20 @@
-# Telegram Mini App Auth Extractor
-**This is a Chrome Extension that helps to get authorization from any Mini App using Telegram Web version, even if the app does not work in Web version.**
+# Telegram Mini App Tools
+**This is a Chrome Extension that helps you to:**
 
-Link to it in Chrome Extensions Store: [here it is](https://chromewebstore.google.com/detail/telegram-mini-app-auth-ex/fjmkmlebpiodjmkpbpblflpgkmojigpm).
++ Get the authorization token
++ Open Mini Apps from Telegram Web
++ Get the original URL of Mini Apps
++ You can copy messages from restricted channels
 
-It was created for my another huge project users: [Auto Blum Farm Bot in Telegram](https://t.me/AutoBlumFarm). Actually, check my GitHub profile. I am planning to publish it's source one day, so maybe you read this when it's done.
+**It works with most Mini Apps using the Telegram Web version, even if the app does not normally function in the web version.**
 
-## How does it work?
 
-Telegram, in the case of Mini Apps, always sends authorization specifically for this application when it is opened. In this case, in the Web version, the Mini App opens using an `<iframe>`, inside of which a link is written in the `src` attribute. This link contains authorization - user's data and it's hash.
+## Screenshots
 
-![Screenshot of Telegram Web and Chrome Developer Inspect tools opened to show the auth in iframe src link](explanation.png)
+![Screenshot](images/1.png)
 
-The server checks the hash. In short, hashing occurs with a certain `key`, which is the `API token` of the telegram bot, respectively, the telegram knows it, and the developer knows it, but you don't know it, you only have the initial data and its hashed result. And, if successful, gives you its own authorization. Therefore, bot programs for Mini Apps (or why else would you need this extension for the most part) require this authorization. It's easier to get and better.
+## Credits
 
-### Screenshots
+ + [ButterDevelop/TelegramMiniAppAuthExtractor](https://github.com/ButterDevelop/TelegramMiniAppAuthExtractor)
 
-![Screenshot of GUI while auth not found yet](screenshot1.png)
-
-![Screenshot of GUI with the auth found](screenshot2.png)
+ + [NabiKAZ](https://gist.github.com/NabiKAZ/10ab0c25c0703d5d3f5b9b4acd500c66)
