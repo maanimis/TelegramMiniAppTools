@@ -25,8 +25,8 @@ async function initializeButtons() {
   const isMiniAppEnabled = storedToggleStatus?.isEnable ?? false;
 
   toggleMiniAppButton.textContent = isMiniAppEnabled
-    ? "MiniApp in Web: Enable"
-    : "MiniApp in Web: Disable";
+    ? "MiniApp in Web: Disable"
+    : "MiniApp in Web: Enable";
 
   toggleMiniAppButton.addEventListener("click", async () => {
     const newStatus = !isMiniAppEnabled;
@@ -34,8 +34,8 @@ async function initializeButtons() {
       toggleMiniAppButton: { isEnable: newStatus },
     });
     toggleMiniAppButton.textContent = newStatus
-      ? "MiniApp in Web: Enable"
-      : "MiniApp in Web: Disable";
+      ? "MiniApp in Web: Disable"
+      : "MiniApp in Web: Enable";
     setData("[+] Done\n\n>>> Refresh the page");
   });
 
