@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "ESNext",   // Use ES modules
+    "esModuleInterop": true,  // This allows compatibility between ESM and CommonJS
+    "moduleResolution": "Bundler",
+    "allowJs": true,      // Ensure JavaScript files are allowed
+    "checkJs": true,
+    "strict": true,
+    "noEmitOnError": true,
+    "jsx": "react",
+    "outDir": "./fromTSC",
+    "resolveJsonModule": true,
+    "types": ["jest", "node","chrome"],
+    "typeRoots": [ "node_modules/@types" ],
+    "experimentalDecorators": true,
+    "sourceMap": false,    // Helpful for debugging
+    "skipLibCheck": true,
+    "allowUnreachableCode": false,                     /* Disable error reporting for unreachable code. */
+    "noUnusedLocals": true,        
+    "removeComments": true,                   /* Enable error reporting when local variables aren't read. */
+    "paths": {
+      "@root/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.mjs"],
+  "exclude": ["node_modules", "dist"]
+}

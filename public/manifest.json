@@ -1,0 +1,43 @@
+{
+   "manifest_version": 3,
+   "name": "BOT",
+   "description": "BOT",
+   "version": "1.0",
+   "icons": {
+      "128": "images/extension_48.png"
+   },
+   "action": {
+      "default_popup": "popup.html",
+      "default_title": "BOT",
+      "default_icon": {
+         "48": "images/extension_48.png"
+      }
+   },
+   "host_permissions": [
+      "<all_urls>"
+   ],
+   "content_scripts": [
+      {
+         "js": [
+            "script/content_script.bundle.js"
+         ],
+         "matches": [
+            "<all_urls>"
+         ],
+         "run_at": "document_end"
+      }
+   ],
+   "background": {
+      "service_worker": "script/background.bundle.js"
+   },
+   "permissions": [
+      "scripting",
+      "storage",
+      "activeTab",
+      "tabs",
+      "webNavigation",
+      "declarativeNetRequest",
+      "declarativeNetRequestWithHostAccess",
+      "declarativeNetRequestFeedback"
+   ]
+}

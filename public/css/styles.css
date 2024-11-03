@@ -1,0 +1,209 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    direction: rtl;
+    min-height: 100vh;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+h2,
+h4 {
+    color: #3498db;
+    text-align: center;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+h2:hover,
+h4:hover {
+    color: #2980b9;
+}
+
+h4.warning {
+    color: #ff3131;
+    transition: color 0.3s ease;
+}
+
+h4.warning:hover {
+    color: #e60000;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+.dropdown-row {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #34495e;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+label:hover {
+    color: #2c3e50;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:hover,
+select:hover {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+input:focus,
+select:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 8px rgba(41, 128, 185, 0.8);
+}
+
+input::placeholder {
+    color: #bdc3c7;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    background-color: #1f5a7a;
+    transform: scale(1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 1.5rem 0;
+    transition: background 0.3s ease;
+}
+
+hr:hover {
+    background: #bdc3c7;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    h2,
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    input,
+    select {
+        font-size: 0.9rem;
+        padding: 0.4rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .button-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 0.6rem;
+    }
+}
+
+.expiry-date-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.expiry-date {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.expiry-date input {
+    width: 50px;
+}
+
+.bank-details {
+    display: none;
+    flex-direction: column;
+}
+
+.payment-link {
+    display: none;
+    flex-direction: column;
+}

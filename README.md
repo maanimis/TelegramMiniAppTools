@@ -9,6 +9,9 @@
 **It works with most Mini Apps using the Telegram Web version, even if the app does not normally function in the web version.**
 
 
+## build
+```npm run build```
+
 ## Screenshots
 
 ![Screenshot](images/1.png)

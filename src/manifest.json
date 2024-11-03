@@ -11,7 +11,7 @@
     "*://*.web.telegram.org/*"
   ],
   "background": {
-    "service_worker": "script/background.js"
+    "service_worker": "script/background.bundle.js"
   },
   "content_scripts": [
     {
@@ -19,7 +19,7 @@
         "*://web.telegram.org/*"
       ],
       "js": [
-        "script/content.js"
+        "script/content_script.bundle.js"
       ],
       "all_frames": true
     }
